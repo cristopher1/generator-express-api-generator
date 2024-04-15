@@ -1,0 +1,149 @@
+components:
+  examples:
+    #Bad request detected by JSON Schema
+    NewUserBadRequestDetectedByJsonSchema:
+      value:
+        errors:
+          [
+            {
+              instancePath: '/names',
+              schemaPath: '#/errorMessage',
+              keyword: 'errorMessage',
+              params:
+                {
+                  errors:
+                    [
+                      {
+                        instancePath: '/names',
+                        schemaPath: '#/allOf/0/properties/names/pattern',
+                        keyword: 'pattern',
+                        params: { pattern: '^[a-z]+( [a-z]+)*$' },
+                        message: 'must match pattern "^[a-z]+( [a-z]+)*$"',
+                        emUsed: true,
+                      },
+                    ],
+                },
+              message: 'Names must have letters and spaces. For example: username username',
+            },
+          ]
+
+    #Bad request detected by Sequelize Validation
+    NewUserBadRequestDetectedBySequelizeValidation:
+      value:
+        errors:
+          [
+            {
+              message: 'The names only can contain letters',
+              type: 'Validation error',
+              path: 'names',
+              value: 'example name',
+              origin: 'FUNCTION',
+              instance:
+                {
+                  email: 'usernamea@example.com',
+                  names: 'example name',
+                  surnames: 'example surname',
+                  password: 'exampleuserpassword',
+                  updatedAt: '2024-04-01T17:18:24.149Z',
+                  createdAt: '2024-04-01T17:18:24.149Z',
+                },
+              validatorKey: 'is',
+              validatorName: 'is',
+              validatorArgs: [{}],
+              original: { validatorName: 'is', validatorArgs: [{}] },
+            },
+            {
+              message: 'The surnames only can contain letters',
+              type: 'Validation error',
+              path: 'surnames',
+              value: 'example surname',
+              origin: 'FUNCTION',
+              instance:
+                {
+                  email: 'usernamea@example.com',
+                  names: 'example name',
+                  surnames: 'example surname',
+                  password: 'exampleuserpassword',
+                  updatedAt: '2024-04-01T17:18:24.149Z',
+                  createdAt: '2024-04-01T17:18:24.149Z',
+                },
+              validatorKey: 'is',
+              validatorName: 'is',
+              validatorArgs: [{}],
+              original: { validatorName: 'is', validatorArgs: [{}] },
+            },
+          ]
+
+    #Bad request detected by JSON Schema
+    UpdatedUserBadRequestDetectedByJsonSchema:
+      value:
+        errors:
+          [
+            {
+              instancePath: '/surnames',
+              schemaPath: '#/errorMessage',
+              keyword: 'errorMessage',
+              params:
+                {
+                  errors:
+                    [
+                      {
+                        instancePath: '/surnames',
+                        schemaPath: '#/allOf/0/properties/surnames/pattern',
+                        keyword: 'pattern',
+                        params: { pattern: '^[a-z]+( [a-z]+)*$' },
+                        message: 'must match pattern "^[a-z]+( [a-z]+)*$"',
+                        emUsed: true,
+                      },
+                    ],
+                },
+              message: 'Surnames must have letters and spaces. For example: surname surname',
+            },
+          ]
+
+    #Bad request detected by Sequelize Validation
+    UpdatedUserBadRequestDetectedBySequelizeValidation:
+      value:
+        errors:
+          [
+            {
+              message: 'The names only can contain letters',
+              type: 'Validation error',
+              path: 'names',
+              value: 'example name',
+              origin: 'FUNCTION',
+              instance:
+                {
+                  email: 'usernamea@example.com',
+                  names: 'example name',
+                  surnames: 'example surname',
+                  password: 'exampleuserpassword',
+                  updatedAt: '2024-04-01T17:18:24.149Z',
+                  createdAt: '2024-04-01T17:18:24.149Z',
+                },
+              validatorKey: 'is',
+              validatorName: 'is',
+              validatorArgs: [{}],
+              original: { validatorName: 'is', validatorArgs: [{}] },
+            },
+            {
+              message: 'The surnames only can contain letters',
+              type: 'Validation error',
+              path: 'surnames',
+              value: 'example surname',
+              origin: 'FUNCTION',
+              instance:
+                {
+                  email: 'usernamea@example.com',
+                  names: 'example name',
+                  surnames: 'example surname',
+                  password: 'exampleuserpassword',
+                  updatedAt: '2024-04-01T17:18:24.149Z',
+                  createdAt: '2024-04-01T17:18:24.149Z',
+                },
+              validatorKey: 'is',
+              validatorName: 'is',
+              validatorArgs: [{}],
+              original: { validatorName: 'is', validatorArgs: [{}] },
+            },
+          ]

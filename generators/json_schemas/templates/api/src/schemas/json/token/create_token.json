@@ -1,0 +1,30 @@
+{
+  "$id": "/createToken",
+  "type": "object",
+  "required": ["email", "password"],
+  "allOf": [
+    {
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "errorMessage": {
+    "type": "The token must be an object",
+    "required": {
+      "email": "Email is required",
+      "password": "Password is required"
+    },
+    "properties": {
+      "email": "Email must be a valid email"
+    },
+    "additionalProperties": "Accepted propeties are: email and password"
+  }
+}

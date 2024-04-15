@@ -1,0 +1,36 @@
+components:
+  responses:
+    Ok:
+      description: The request was completed successfully.
+      content:
+        text/plain:
+          type: string
+          example: Ok
+
+    Created:
+      description: The resource was created.
+      content:
+        text/plain:
+          type: string
+          example: Created
+
+    NotFound:
+      description: The resource was not found. Koa2 default response for 404 code status.
+      content:
+        text/plain:
+          type: string
+          example: Not Found
+
+    Unauthorized:
+      description: Unauthorized user.
+      content:
+        text/plain:
+          type: string
+          example: Unauthorized
+
+    InternalServerError:
+      description: Internal server error.
+      content:
+        text/plain:
+          type: string
+          example: Internal Server Error

@@ -1,0 +1,22 @@
+components:
+  schemas:
+    CreateJSONWebToken:
+      description: Create a JSON Web Token. Used by POST /api/v1/tokens/
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          example: username@example.com
+        password:
+          type: string
+          example: exampleuserpassword
+      additionalProperties: false
+
+    Token:
+      description: Token create by jsonwebtoken
+      type: object
+      properties:
+        token:
+          type: string
+      additionalProperties: false

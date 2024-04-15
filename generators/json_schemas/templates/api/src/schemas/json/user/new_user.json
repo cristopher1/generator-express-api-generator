@@ -1,0 +1,42 @@
+{
+  "$id": "/newUser",
+  "type": "object",
+  "required": ["email", "names", "surnames", "password"],
+  "allOf": [
+    {
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "names": {
+          "type": "string",
+          "pattern": "^[a-z]+( [a-z]+)*$"
+        },
+        "surnames": {
+          "type": "string",
+          "pattern": "^[a-z]+( [a-z]+)*$"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "errorMessage": {
+    "type": "The new user must be an object",
+    "required": {
+      "email": "Email is required",
+      "names": "Names is required",
+      "surnames": "Surnames is required",
+      "password": "Password is required"
+    },
+    "properties": {
+      "email": "Email must be a valid email",
+      "names": "Names must have letters and spaces. For example: username username",
+      "surnames": "Surnames must have letters and spaces. For example: surname surname"
+    },
+    "additionalProperties": "Accepted properties are: email, names, surnames and password"
+  }
+}

@@ -1,0 +1,33 @@
+components:
+  examples:
+    #Token associtate to username@example.com
+    UsernameTokenExample:
+      value:
+        token: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJ0ZXN0QHVzZXIuY29tIiwibmFtZXMiOiJzdXBlcmFkbWluamFtZXMiLCJzdXJuYW1lcyI6ImZha2VydXNlciIsImlhdCI6MTcxMTY4MDI4NX0.oSYInQkvbOKUU3WQeC2kYOJ6uqvYkDQEzTVDUWrz4QBmn1w4KLt88JkI0drIfbjtRTreZMk-kWTb3pdgVTu1FQ
+
+    #Bad request detected by JSON Schema
+    CreateTokenBadRequestDetectedByJsonSchema:
+      value:
+        errors:
+          [
+            {
+              instancePath: '',
+              schemaPath: '#/errorMessage',
+              keyword: 'errorMessage',
+              params:
+                {
+                  errors:
+                    [
+                      {
+                        instancePath: '',
+                        schemaPath: '#/required',
+                        keyword: 'required',
+                        params: { missingProperty: 'password' },
+                        message: "must have required property 'password'",
+                        emUsed: true,
+                      },
+                    ],
+                },
+              message: 'Password is required',
+            },
+          ]

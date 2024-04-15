@@ -1,0 +1,30 @@
+{
+  "$id": "/updatedUser",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "names": {
+          "type": "string",
+          "pattern": "^[a-z]+( [a-z]+)*$"
+        },
+        "surnames": {
+          "type": "string",
+          "pattern": "^[a-z]+( [a-z]+)*$"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "errorMessage": {
+    "type": "The updated user must be an object",
+    "properties": {
+      "names": "Names must have letters and spaces. For example: username username",
+      "surnames": "Surnames must have letters and spaces. For example: surname surname"
+    },
+    "additionalProperties": "Accepted properties are: email, names, surnames and password"
+  }
+}

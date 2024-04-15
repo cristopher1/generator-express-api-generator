@@ -1,0 +1,55 @@
+components:
+  schemas:
+    NewUser:
+      description: Register an user. Used by POST /api/v1/users/register
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          example: username@example.com
+        names:
+          type: string
+          example: example name
+        surnames:
+          type: string
+          example: example surname
+        password:
+          type: string
+          example: exampleuserpassword
+      additionalProperties: false
+      required:
+        - email
+        - password
+        - names
+        - surnames
+
+    UpdatedUser:
+      description: Update an user. Used by PUT /api/v1/users/
+      type: object
+      properties:
+        names:
+          type: string
+          example: example newname
+        surnames:
+          type: string
+          example: example newsurname
+        password:
+          type: string
+          example: newexampleuserpassword
+      additionalProperties: false
+
+    User:
+      description: Get an user. Used by GET api/v1/users/{userEmail}
+      type: object
+      properties:
+        email:
+          type: string
+          example: username@example.com
+        names:
+          type: string
+          example: example name
+        surnames:
+          type: string
+          example: example surname
+      additionalProperties: false
