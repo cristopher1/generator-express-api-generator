@@ -28,7 +28,6 @@ Example of a generator created by `generator-express-api-generator`:
 
 ![project-generated-by-generator-express-api-generator](https://github.com/cristopher1/generator-express-api-generator/assets/21159930/e8e754e8-3416-40e8-a0ee-69dcf9f2bc57)
 
-
 ### [Index](#index)
 
 - [Installation](#installation)
