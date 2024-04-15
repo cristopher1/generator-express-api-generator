@@ -13,9 +13,8 @@ overrides:
     },
     {
       files: ['generators/**/src/**/*.js'],
-      extends: ['plugin:jsdoc/recommended'],
-      plugins: ['jsdoc'],
-      rules: { 'jsdoc/tag-lines': 0 },
+      extends: ['plugin:openapi/recommended'],
+      plugins: ['openapi'],
     },
     {
       env: { node: true },
