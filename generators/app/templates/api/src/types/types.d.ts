@@ -1,4 +1,3 @@
-import { BaseContext } from 'koa'
 import Ajv from 'ajv'
 import { Sequelize, Model, ModelStatic } from 'sequelize'
 
