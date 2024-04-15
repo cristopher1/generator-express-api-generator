@@ -82,13 +82,13 @@ router.put(
     })
 
     if (!user) {
-      req.sendStatus(404)
+      res.sendStatus(404)
       return
     }
 
     await user.update(updatedUser)
 
-    req.sendStatus(201)
+    res.sendStatus(201)
   },
 )
 

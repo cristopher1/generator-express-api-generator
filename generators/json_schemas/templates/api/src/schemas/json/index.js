@@ -81,7 +81,7 @@ const getValidatorSchema = (validator) => {
  * Loads JSON Schemas and the validator object
  *
  * @param {string} dirname The directory where the JSON Schemas file are
- * @param {string} [format] The extension of the file. Default is `.json`
+ * @param {string} [format=.json] The extension of the file. Default is `.json`
  * @returns {Promise<JsonSchema>} Returns a promise, when the promise is
  *   fulfilled, the promise returns the orm object that contains database
  *   connection and orm models

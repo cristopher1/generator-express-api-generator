@@ -17,7 +17,7 @@
     "commitlint": "npx commitlint --edit",
     "quality-check": "npm run format && npm run lint"
   },
-"devDependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
@@ -36,6 +36,7 @@
     "eslint-plugin-openapi": "^0.0.4",
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.3",
+    "koa2-swagger-ui": "^5.10.0",
     "lint-staged": "^15.2.0",
     "nodemon": "^3.1.0",
     "openapi-comment-parser": "^1.0.0",
@@ -54,7 +55,7 @@
     "globs": "^0.1.4",
     "http-errors": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
-    "sequelize": "^6.37.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "sequelize": "^6.37.1"
   }
 }

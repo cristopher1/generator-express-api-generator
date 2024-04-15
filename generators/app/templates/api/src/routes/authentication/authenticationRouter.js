@@ -1,31 +1,13 @@
 import express from 'express'
-import jwt from 'jsonwebtoken'
-import config from '../../config/jwt.js'
-
-const { JWTSecret, JWTAlgorithm } = config
-
-/** @type {import('express').RequestHandler} */
-const isAuthenticated = async (req, res, next) => {
-  const { token } = req
-  if (!token) {
-    res.sendStatus(401)
-    return
-  }
-
-  const userInfo = jwt.verify(token, JWTSecret, {
-    algorithm: JWTAlgorithm,
-  })
-
-  if (userInfo) {
-    req.userInfo = userInfo
-    next()
-  } else {
-    res.sendStatus(401)
-  }
-}
+import openapi from 'openapi-comment-parser'
+import swaggerUi from 'swagger-ui-express'
+import config from '../../config/openapi.js'
 
 const router = express.Router()
 
-router.use(isAuthenticated)
+const openApiSpecification = openapi(config)
 
-export { router as authenticationRouter }
+router.use('/', swaggerUi.serve)
+router.get('/', swaggerUi.setup(openApiSpecification))
+
+export { router as swaggerRouter }

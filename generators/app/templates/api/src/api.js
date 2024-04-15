@@ -45,7 +45,7 @@ api.use(async (err, req, res, next) => {
   }
 
   if (environment === 'development') {
-    console.log(err)
+    console.error(err)
   }
 })
 
