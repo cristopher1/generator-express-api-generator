@@ -1,6 +1,6 @@
 {
   "name": "generator-express-api-generator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Yeoman generator to create a base structure for APIs based on Express framework and sequelize, using tools such as: eslint, prettier, swagger and others.",
   "homepage": "https://github.com/cristopher1/generator-express-api-generator",
   "type": "module",
